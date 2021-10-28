@@ -6,6 +6,11 @@ namespace Matriz2
     {
         static void Main(string[] args)
         {
+            /*
+             * ----------------- KAUAM SILVA BATISTA - 210501----------------------
+             */
+
+
             //Inserindo e lendo o número de linhas
             Console.WriteLine("Insira o número de linhas: ");
             int n = int.Parse(Console.ReadLine());

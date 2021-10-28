@@ -45,6 +45,7 @@ namespace Matriz2
                     //Comparando se o valor da posição da linha e da coluna é menor que zero
                     if (mat[i, j] == x)
                     {
+                        //Comparando se a posição número estão no meio da matriz
                         if (i > 0 && j > 0 && i != (n - 1) && j != (m - 1))
                         {
                             //Criando váriaveis para saber qual o número antes, depois, em cima e em baixo do número escolhido
@@ -53,7 +54,7 @@ namespace Matriz2
                             int acima = mat[i - 1, j];
                             int abaixo = mat[i + 1, j];
 
-                            //Imprimindo cada número
+                            //Imprimindo cada número da posição correta
                             Console.WriteLine("\n-------------------------------");
                             Console.WriteLine("Posição: " + i + "," + j);
                             Console.WriteLine("Número acima: " + acima);
@@ -62,50 +63,126 @@ namespace Matriz2
                             Console.WriteLine("Número a esquerda: " + esquerdo);
                             Console.WriteLine("-------------------------------");
                         }
+                        //Comparando se a posição do número está na primeira posição 
                         else if (i == 0 && j ==0)
                         {
+                            //Criando as variaveis para escrever os números das posições corretas
                             int direito = mat[i, j + 1];
                             int abaixo = mat[i + 1, j];
 
+                            //Imprimindo cada número da posição correta
                             Console.WriteLine("\n-------------------------------");
                             Console.WriteLine("Posição: " + i + "," + j);
                             Console.WriteLine("Número abaixo: " + abaixo);
                             Console.WriteLine("Número a direita: " + direito);
                             Console.WriteLine("-------------------------------");
                         }
+                        //Comparando se a posição do número está na última posição 
                         else if (i == (n-1) && j == (m-1))
                         {
+                            //Criando as variaveis para escrever os números das posições corretas
                             int esquerdo = mat[i, j - 1];
                             int acima = mat[i - 1, j];
 
+                            //Imprimindo cada número da posição correta
                             Console.WriteLine("\n-------------------------------");
                             Console.WriteLine("Posição: " + i + "," + j);
                             Console.WriteLine("Número acima: " + acima);
                             Console.WriteLine("Número a esquerda: " + esquerdo);
                             Console.WriteLine("-------------------------------");
                         }
+                        //Comparando se a posição do número está na posição desejada - 1º coluna / última linha
                         else if (i == (n-1) && j == 0)
                         {
+                            //Criando as variaveis para escrever os números das posições corretas
                             int direito = mat[i, j + 1];
                             int acima = mat[i - 1, j];
 
+                            //Imprimindo cada número da posição correta
                             Console.WriteLine("\n-------------------------------");
                             Console.WriteLine("Posição: " + i + "," + j);
                             Console.WriteLine("Número acima: " + acima);
                             Console.WriteLine("Número a direita: " + direito);
                             Console.WriteLine("-------------------------------");
                         }
+                        //Comparando se a posição do número está na posição desejada - 1º linha / última coluna
                         else if (i == 0 && j == (m - 1))
                         {
+                            //Criando as variaveis para escrever os números das posições corretas
                             int esquerdo = mat[i, j - 1];
                             int abaixo = mat[i + 1, j];
 
+                            //Imprimindo cada número da posição correta
                             Console.WriteLine("\n-------------------------------");
                             Console.WriteLine("Posição: " + i + "," + j);
                             Console.WriteLine("Número a esquerda: " + esquerdo);
                             Console.WriteLine("Número abaixo: " + abaixo);
                             Console.WriteLine("-------------------------------");
-                        }               
+                        }
+                        //Comparando se a posição do número está na posição desejada - 1º linha
+                        else if (i == 0 && j < (m-1) && j>0)
+                        {
+                            //Criando as variaveis para escrever os números das posições corretas
+                            int esquerdo = mat[i, j - 1];
+                            int abaixo = mat[i + 1, j];
+                            int direito = mat[i, j + 1];
+
+                            //Imprimindo cada número da posição correta
+                            Console.WriteLine("\n-------------------------------");
+                            Console.WriteLine("Posição: " + i + "," + j);
+                            Console.WriteLine("Número a esquerda: " + esquerdo);
+                            Console.WriteLine("Número a direita: " + direito);
+                            Console.WriteLine("Número abaixo: " + abaixo);
+                            Console.WriteLine("-------------------------------");
+                        }
+                        //Comparando se a posição do número está na posição desejada - primeira coluna
+                        else if (j == 0 && i < (n-1) && i>0)
+                        {
+                            //Criando as variaveis para escrever os números das posições corretas
+                            int acima = mat[i - 1, j];
+                            int abaixo = mat[i + 1, j];
+                            int direito = mat[i, j + 1];
+
+                            //Imprimindo cada número da posição correta
+                            Console.WriteLine("\n-------------------------------");
+                            Console.WriteLine("Posição: " + i + "," + j);
+                            Console.WriteLine("Número acima: " + acima);
+                            Console.WriteLine("Número a direita: " + direito);
+                            Console.WriteLine("Número abaixo: " + abaixo);
+                            Console.WriteLine("-------------------------------");
+                        }
+                        //Comparando se a posição do número está na posição desejada -  última coluna
+                        else if (j == (m - 1) && i>0)
+                        {
+                            //Criando as variaveis para escrever os números das posições corretas
+                            int acima = mat[i - 1, j];
+                            int abaixo = mat[i + 1, j];
+                            int esquerdo = mat[i, j - 1];
+
+                            //Imprimindo cada número da posição correta
+                            Console.WriteLine("\n-------------------------------");
+                            Console.WriteLine("Posição: " + i + "," + j);
+                            Console.WriteLine("Número acima: " + acima);
+                            Console.WriteLine("Número a esquerda: " + esquerdo);
+                            Console.WriteLine("Número abaixo: " + abaixo);
+                            Console.WriteLine("-------------------------------");
+                        }
+                        //Comparando se a posição do número está na posição desejada - última linha
+                        else if (i == (n - 1) && j > 0)
+                        {
+                            //Criando as variaveis para escrever os números das posições corretas
+                            int esquerdo = mat[i, j - 1];
+                            int acima = mat[i - 1, j];
+                            int direito = mat[i, j + 1];
+
+                            //Imprimindo cada número da posição correta
+                            Console.WriteLine("\n-------------------------------");
+                            Console.WriteLine("Posição: " + i + "," + j);
+                            Console.WriteLine("Número a esquerda: " + esquerdo);
+                            Console.WriteLine("Número a direita: " + direito);
+                            Console.WriteLine("Número acima: " + acima);
+                            Console.WriteLine("-------------------------------");
+                        }
                     }
                     /*else
                     {
